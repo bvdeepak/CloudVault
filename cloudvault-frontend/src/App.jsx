@@ -6,6 +6,8 @@ import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./utils/PrivateRoute";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import SharePage from './pages/SharePage'; // or wherever your Share component is
+
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          <Route path="/share/:id" element={<SharePage />} />
+
       </Routes>
     </BrowserRouter>
   );
