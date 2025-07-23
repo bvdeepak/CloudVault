@@ -25,7 +25,6 @@ const Dashboard = () => {
     if (!file) return toast.warning("No file selected");
     const formData = new FormData();
     formData.append("file", file);
-    
 
     try {
       await axios.post(`${import.meta.env.VITE_API_URL}/files/upload`, formData, {

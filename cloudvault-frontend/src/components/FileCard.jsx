@@ -28,7 +28,7 @@ const FileCard = ({ file, onDelete }) => {
   };
 
   const previewFile = () => {
-    window.open(`http://localhost:5000/uploads/${file.filename}`, '_blank');
+window.open(`${import.meta.env.VITE_API_URL.replace('/api', '')}/uploads/${file.filename}`, '_blank')
   };
 
   const copyShareLink = () => {

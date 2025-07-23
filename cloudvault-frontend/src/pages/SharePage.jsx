@@ -22,7 +22,7 @@ axios.get(`${import.meta.env.VITE_API_URL}/files/shared/${id}`)
       <button
         className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
         onClick={() =>
-    window.open(`http://localhost:5000/uploads/${file.filename}`, '_blank')
+window.open(`${import.meta.env.VITE_API_URL.replace('/api', '')}/uploads/${file.filename}`, '_blank')
         }
       >
         Preview File
