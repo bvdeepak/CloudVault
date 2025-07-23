@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, form);
+      await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, form);
       toast.success("Registered successfully");
       navigate("/login");
     } catch (err) {
